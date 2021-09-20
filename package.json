@@ -1,0 +1,15 @@
+{
+  "name": "botscraping",
+  "version": "1.0.0",
+  "description": "bot que pesquisa informaçoes e as retorna",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^10.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}
