@@ -3,7 +3,7 @@ const readline = require('readline-sync');//readline responsavel por receber as 
 const menu = require("./src/menu");//menu 
 const money = require('./src/moeda');//função dinheiro
 const notices = require('./src/noticias');//função noticias
-const google = require('./src/google');//função dinheiro
+const pesquisa = require('./src/pesquisa');//função pesquisa
 
 //ao iniciar o programa
 
@@ -22,7 +22,7 @@ function main() {
             money().then(() => { main() })
             break;
         case '2':
-            google().then(() => { main() })
+            pesquisa().then(() => { main() })
 
             break;
 
