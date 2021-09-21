@@ -1,5 +1,11 @@
 const menu = function () {
-    return "╠══✪〘 MENU 〙✪══\n╠1-calcular moedas\n╠2-procurar\n╠0-sair "
+    return `                 
+    ╠══✪〘 MENU 〙✪══
+    ║
+    ╠➥ *1-calcular moedas*
+    ╠➥ *2- procurar coisas*
+    ╠➥ *3- noticias diarias*
+    ╠➥ *0- sair*`
 
 }
 module.exports=menu;
