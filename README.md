@@ -14,6 +14,6 @@
 </ul>
 <h2>👾funções ip👾</h2>
 <ul>
-<li>encontra endereço de determinado ip</li>
+<li>encontra os dados de determinado ip</li>
 <li>encontra ip do usuário</li>
 </ul>
