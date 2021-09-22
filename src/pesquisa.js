@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');//PUPPTEER responsavel pelo webscraping com chormium
 const readline = require('readline-sync');//readline responsavel por receber as variaveis pelo terminal
-const naoprocuro = ['gore', 'loli', 'porn', 'porno', 'xxx', 'xvideos']//palavras proibidas(pode adicionar outras para teste)
+const naoprocuro = require('./data/listprob.json')// palavras proibidas(pode adicionar outras para teste)
 
 
 const pesquisa = async function searchgoogle() {

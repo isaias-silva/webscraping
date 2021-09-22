@@ -4,8 +4,7 @@ const menu = require("./src/menu");//menu
 const money = require('./src/moeda');//função dinheiro
 const notices = require('./src/noticias');//função noticias
 const pesquisa = require('./src/pesquisa');//função pesquisa
-
-//ao iniciar o programa
+const config = require('./src/config')
 
 console.log(`
        
@@ -74,6 +73,31 @@ function main() {
         case '3':
             notices().then(() => { main() })
             break;
+        case '4':
+            config.ms()
+            let pa = readline.question("qual a palavra deseja adicionar?  " || null)
+            if (pa != null) {
+                config.add(pa);
+                config.ms()
+                main()
+            } else {
+                console.log("palavra vazia!")
+                main()
+            }
+            break;
+        case '5':
+            let pr = readline.question("qual a palavra deseja remover?  " || null)
+            if (pr != null) {
+                config.rm(pr);
+                config.ms()
+                main()
+            } else {
+                console.log("palavra vazia!")
+                main()
+            }
+
+            break;
+
         case '0':
             console.log("bye!")
             break;
