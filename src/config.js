@@ -1,4 +1,13 @@
 const naoprocuro = require('./data/listprob.json')
+const fs=require('fs')
+
+function syncro(){
+    fs.writeFileSync(__dirname+'/data/listprob.json', JSON.stringify(naoprocuro))
+}
+
+
+
+
 const Mostrar=function(){
     console.log(` palavras proibidas:`)
    for(let i in naoprocuro)
@@ -10,6 +19,8 @@ const Mostrar=function(){
 
 
 
+
+
 const Remover = function (nome) {
     let encontrou = false;
     for (let i in naoprocuro) {
@@ -18,8 +29,10 @@ const Remover = function (nome) {
             naoprocuro.splice(i, 1);
             console.log('\x1b[32m',`${nome} encontrado e removido!`)
             console.log('\x1b[0m','')
+            syncro()
             encontrou = true;
         }
+        
     }
 
     if (encontrou == false) { console.log("não encontrado") }
@@ -30,6 +43,7 @@ const Adicionar = function (nome){
     naoprocuro.push(nome);
     console.log('\x1b[32m',`${nome} adicionado`)
     console.log('\x1b[0m','')
+    syncro()
 }
 
 module.exports={add:Adicionar,rm:Remover,ms:Mostrar}
