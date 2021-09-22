@@ -7,7 +7,7 @@ const menu = function () {
     ╠➥ *3- noticias diarias*
     ╠➥ *4- adicionar palavra proibida*
     ╠➥ *5- remover palavra proibida*
-    ╠➥ *6- consulta ip*
+    ╠➥ *6- consulta ip(VIP)*
     ╠➥ *7- consulta ver seu ip*
     ╠➥ *0- sair*`
 

@@ -1,6 +1,6 @@
 
 const puppeteer = require('puppeteer');//PUPPTEER responsavel pelo webscraping com chormium
-const readline = require('readline-sync');//readline responsavel por receber as variaveis pelo terminal
+
 
 const notices = async function notices() {
 
