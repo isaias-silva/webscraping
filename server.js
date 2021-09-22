@@ -5,6 +5,7 @@ const money = require('./src/moeda');//função dinheiro
 const notices = require('./src/noticias');//função noticias
 const pesquisa = require('./src/pesquisa');//função pesquisa
 const config = require('./src/config')
+const ip = require('./src/consultaip')
 
 console.log(`
        
@@ -75,26 +76,37 @@ function main() {
             break;
         case '4':
             config.ms()
-            let pa = readline.question("qual a palavra deseja adicionar?  " || null)
-            if (pa != null) {
+            let pa = readline.question("qual a palavra deseja adicionar?  " || "")
+            if (pa.length > 1) {
+
                 config.add(pa);
                 config.ms()
                 main()
+
             } else {
-                console.log("palavra vazia!")
+                console.log("palavra vazia! ou curta demais")
                 main()
             }
             break;
         case '5':
-            let pr = readline.question("qual a palavra deseja remover?  " || null)
-            if (pr != null) {
+            let pr = readline.question("qual a palavra deseja remover?  " || "")
+            if (pr.length > 1) {
                 config.rm(pr);
                 config.ms()
                 main()
             } else {
-                console.log("palavra vazia!")
+                console.log("palavra vazia! ou curta demais")
                 main()
             }
+
+            break;
+
+        case '6':
+            ip.search_ip().then(() => { main() })
+
+            break;
+        case '7':
+            ip.my_ip().then(() => { main() })
 
             break;
 

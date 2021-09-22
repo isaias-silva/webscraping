@@ -6,7 +6,7 @@ const notices = async function notices() {
 
     const url = `https://www.google.com/search?q=noticias&sxsrf=AOaemvKgbOAd501ZbF1_XTWUKtpsO9lERA:1632184364679&source=lnms&tbm=nws&sa=X&sqi=2&ved=2ahUKEwidtY7K6I7zAhXES_EDHZYpB0kQ_AUoAXoECAEQAw&biw=754&bih=690&dpr=0.9`
     const browser = await puppeteer.launch();
-    //{ headless: false }
+   
     const page = await browser.newPage();
     await page.goto(url);
 
