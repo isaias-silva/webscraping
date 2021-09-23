@@ -9,6 +9,7 @@ const menu = function () {
     ╠➥ *5- remover palavra proibida*
     ╠➥ *6- consulta ip(VIP)*
     ╠➥ *7- consulta ver seu ip*
+    ╠➥ *8-enviar email anônimo*
     ╠➥ *0- sair*`
 
 }

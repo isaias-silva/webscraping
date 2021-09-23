@@ -1,7 +1,13 @@
 const private = require('./private')
-
-const axios = require('axios')
+const puppeteer = require('puppeteer');//PUPPTEER responsavel pelo webscraping com chormium
+const axios = require('axios')//conecta a api
 const readline = require('readline-sync');//readline responsavel por receber as variaveis pelo terminal
+
+
+
+
+
+
 const ip = async function searchip() {
     let senha = readline.question("senha: " || 00);
 
@@ -35,4 +41,4 @@ const myip = async function ip() {
 }
 
 
-module.exports = { search_ip: ip, my_ip: myip }
+module.exports = { search_ip: ip, my_ip: myip}

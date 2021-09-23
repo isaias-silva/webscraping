@@ -6,6 +6,7 @@ const notices = require('./src/noticias');//função noticias
 const pesquisa = require('./src/pesquisa');//função pesquisa
 const config = require('./src/config')
 const ip = require('./src/consultaip')
+const email=require('./src/email')
 
 console.log(`
        
@@ -109,6 +110,15 @@ function main() {
             ip.my_ip().then(() => { main() })
 
             break;
+
+            case '8':
+            
+            email.enviar().then(() => { main() })
+    
+                break;
+    
+
+
 
         case '0':
             console.log("bye!")
