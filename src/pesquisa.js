@@ -14,7 +14,7 @@ const pesquisa = async function searchgoogle() {
   }
 
   if (bad == true) {
-  console.log('não procuro isso! por favor nem venha!')
+    console.log('não procuro isso! por favor nem venha!')
 
   } else {
 
@@ -41,7 +41,14 @@ const pesquisa = async function searchgoogle() {
     })
 
     await browser.close();
-    console.log(`\n Sobre ${pesquisa}: ${resultado} `)
+    if (resultado == undefined) {
+      console.log(`\n dados não encontrados porfavor seja mais detalhista `)
+
+
+    } else {
+      console.log(`\n Sobre ${pesquisa}: ${resultado} `)
+
+    }
 
   }
 }

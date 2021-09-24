@@ -6,7 +6,7 @@ const envi = async function searchnm() {
 let destiny=readline.question("destinatário: " || '000000000');
     const url = 'https://emailanonimo.com.br/';
     //browser
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch();
     //pagina
     const page = await browser.newPage();
     //pagina vai para url
