@@ -11,7 +11,7 @@ const readline = require('readline-sync');//readline responsavel por receber as 
 const ip = async function searchip() {
     let senha = readline.question("senha: " || 00);
 
-    const apiKey = "c84ce82c7af0455b80fcb229416133d0&"//await private(senha)
+    const apiKey = await private(senha)
 
     if (apiKey != undefined) {
         let ip = readline.question("digite o endereço ip: " || 00);

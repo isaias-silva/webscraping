@@ -1,4 +1,4 @@
-//const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt')
 const readline = require('readline-sync');//readline responsavel por receber as variaveis pelo terminal
 const private = require('./data/private.json')
 
